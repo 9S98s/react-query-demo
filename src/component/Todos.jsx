@@ -1,18 +1,18 @@
 import React from 'react';
-import useTodos from '../hooks/useTodos'; // useTodos 훅을 불러움
+import useTodos from '../hooks/useTodos';
 
 function Todos() {
-    const { status, data, error } = useTodos(); // useTodos 훅을 사용하고 상태를 관리
+    const { status, data, error } = useTodos();
 
-    if (status === 'loading') { // 로딩 상태일 때 표시할 내용
+    if (status === 'loading') {
         return <span>Loading...</span>;
     }
 
-    if (status === 'error') { // 에러가 발생했을 때 표시할 내용
+    if (status === 'error') {
         return <span>Error: {error.message}</span>;
     }
 
-    return ( // 데이터가 성공적으로 로딩되었을 때 표시할 내용
+    return (
         <ul>
             {data.map((todo) => {
                 <li key={todo.id}>{todo.title}</li>
