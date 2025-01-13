@@ -1,6 +1,13 @@
-import React from 'react';
-import { useQuery } from '@tanstack/react-query'
+import React from "react";
+import User from "./component/User";
 
-function App() {
-  const info = useQuery({ queryKey: ['todos'], queryFn: fetchTodoList })
-}
+const App = () => {
+    return (
+        <div>
+            <h1>User Informations</h1>
+            <User userId={1} />
+        </div>
+    );
+};
+
+export default App;
