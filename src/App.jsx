@@ -6,6 +6,7 @@ const App = () => {
         <div>
             <h1>User Informations</h1>
             <User userId={1} />
+            <ProductList />
         </div>
     );
 };
