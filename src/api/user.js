@@ -5,3 +5,8 @@ export const fetchUser = async (userId) => {
     }
     return response.json();
 }
+
+export const updateUser = async (userData) => {
+    const response = await axios.patch('https://api.example.com/users', userData);
+    return response.data;
+};
