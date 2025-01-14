@@ -5,11 +5,11 @@ const ProductList = () => {
     const { status, data, error } = useProducts();
 
     if (status === 'loading') {
-        return <div>Loading Products...</div>;
+        return <p>Loading Products...</p>;
     }
 
     if (status === 'error') {
-        return <div>Error: {error.message}</div>;
+        return <p>Error: {error.message}</p>;
     }
 
     return (
